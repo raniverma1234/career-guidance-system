@@ -16,6 +16,10 @@ class User(Base):
     semester = Column(Integer)
     cgpa = Column(Float)
     career_goal = Column(String(150))
+    interests = Column(Text)
+    projects = Column(Text)
+    certifications = Column(Text)
+    experience = Column(Text)
     created_at = Column(DateTime, server_default=func.now())
 
 
@@ -100,4 +104,3 @@ class Progress(Base):
     item_id = Column(Integer)
     completed = Column(Boolean, default=False)
     updated_at = Column(DateTime, server_default=func.now())
-    
