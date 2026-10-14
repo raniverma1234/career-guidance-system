@@ -7,6 +7,7 @@ import routes_auth
 import routes_profile
 import routes_assessment
 import routes_recommendation
+import routes_careers
 
 Base.metadata.create_all(bind=engine)
 
@@ -25,6 +26,7 @@ app.include_router(routes_auth.router)
 app.include_router(routes_profile.router)
 app.include_router(routes_assessment.router)
 app.include_router(routes_recommendation.router)
+app.include_router(routes_careers.router)
 
 
 @app.get("/")
