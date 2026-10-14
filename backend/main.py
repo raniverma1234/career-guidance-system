@@ -6,6 +6,7 @@ import models
 import routes_auth
 import routes_profile
 import routes_assessment
+import routes_recommendation
 
 Base.metadata.create_all(bind=engine)
 
@@ -23,6 +24,7 @@ app.add_middleware(
 app.include_router(routes_auth.router)
 app.include_router(routes_profile.router)
 app.include_router(routes_assessment.router)
+app.include_router(routes_recommendation.router)
 
 
 @app.get("/")
