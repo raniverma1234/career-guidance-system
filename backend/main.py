@@ -9,6 +9,7 @@ import routes_assessment
 import routes_recommendation
 import routes_careers
 import routes_roadmap
+import routes_resume
 
 Base.metadata.create_all(bind=engine)
 
@@ -29,6 +30,7 @@ app.include_router(routes_assessment.router)
 app.include_router(routes_recommendation.router)
 app.include_router(routes_careers.router)
 app.include_router(routes_roadmap.router)
+app.include_router(routes_resume.router)    
 
 
 @app.get("/")
