@@ -13,6 +13,7 @@ import routes_resume
 import routes_explorer
 import routes_progress
 import routes_assistant
+import routes_admin
 
 Base.metadata.create_all(bind=engine)
 
@@ -37,6 +38,7 @@ app.include_router(routes_resume.router)
 app.include_router(routes_explorer.router)  
 app.include_router(routes_progress.router)
 app.include_router(routes_assistant.router)
+app.include_router(routes_admin.router)
 
 
 @app.get("/")
